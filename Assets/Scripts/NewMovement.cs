@@ -11,11 +11,12 @@ public Vector2 jumpHeight;
 BoxCollider2D boxColliderPlayer;
 int layerMaskGround;
 float heightTestPlayer;
+GameManager gameManager;
 
 // Use this for initialization
 void Start () {
   rb = GetComponent<Rigidbody2D>();
-
+  gameManager = FindObjectOfType<GameManager>();
     // Get the player's collider so we can calculate the height of the character.
     boxColliderPlayer = GetComponent<BoxCollider2D>();
     // We do the height test from the center of the player, so we should only check
@@ -33,11 +34,15 @@ void Update ()
 
     if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())  //makes player jump
     {
-        GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
+        rb.AddForce(jumpHeight, ForceMode2D.Impulse);
 }
   if(rb.position.y < -1f){
-        FindObjectOfType<GameManager>().EndGame();
+        gameManager.EndGame();
     }
+     if(Input.GetKeyDown(KeyCode.R)){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    
+}
 }
 private bool IsGrounded()
 {
@@ -54,4 +59,5 @@ private bool IsGrounded()
        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
      }
      }
+       
 }

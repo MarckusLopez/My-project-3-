@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class NewMovement : MonoBehaviour
 {
+  [SerializeField] private AudioClip jumpSoundClip;
+  [SerializeField] private AudioClip deathSoundClip;
+   [SerializeField] private AudioClip musicSoundClip;
     public Rigidbody2D rb;
   public float playerSpeed;  //allows us to be able to change speed in Unity
 public Vector2 jumpHeight;
@@ -26,6 +29,7 @@ void Start () {
     // like to jump ontop of enemies we should add their layer too (which then of
     // course can't be on the same layer as the player).
     layerMaskGround = LayerMask.GetMask("Ground");
+     SoundFXManager.instance.PlaySoundFXClip(musicSoundClip, transform, 1f);
 }
 // Update is called once per frame
 void Update ()
@@ -35,6 +39,7 @@ void Update ()
     if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())  //makes player jump
     {
         rb.AddForce(jumpHeight, ForceMode2D.Impulse);
+         SoundFXManager.instance.PlaySoundFXClip(jumpSoundClip, transform, 1f);
 }
   if(rb.position.y < -1f){
         gameManager.EndGame();
@@ -56,6 +61,7 @@ private bool IsGrounded()
  public void OnTriggerEnter2D(Collider2D collision)
  {
      if (collision.CompareTag("Obstacle")){
+       SoundFXManager.instance.PlaySoundFXClip(deathSoundClip, transform, 1f);
        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
      }
      }

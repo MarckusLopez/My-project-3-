@@ -2724,7 +2724,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5.0000305, y: 0}
+  m_AnchoredPosition: {x: 5.0000305, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &948865690
@@ -2736,6 +2736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 948865692}
+  - component: {fileID: 948865693}
   m_Layer: 0
   m_Name: AudioMixer
   m_TagString: Untagged
@@ -2758,6 +2759,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &948865693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948865690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1935c6c2bba694a9334e212b8a28ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 72e4ce3f01af9d34ebe6f1370e9e8d2e, type: 2}
 --- !u!1 &1108434235
 GameObject:
   m_ObjectHideFlags: 0
@@ -8060,16 +8074,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 137500189}
   m_FillRect: {fileID: 2102567837}
   m_HandleRect: {fileID: 137500188}
-  m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_Direction: 1
+  m_MinValue: 0.0001
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AudioMixer, Assembly-CSharp
+      - m_Target: {fileID: 948865693}
+        m_TargetAssemblyTypeName: GameAudioMixer, Assembly-CSharp
         m_MethodName: SetMusicVolume
         m_Mode: 0
         m_Arguments:
@@ -8283,7 +8297,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5474075446159751400, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4.9999695
+      value: 4.9999695
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446500175168, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8299,15 +8313,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446666776693, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_MaxValue
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446666776693, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_MinValue
-      value: -80
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446666776693, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_Direction
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446666776693, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -8320,7 +8334,7 @@ PrefabInstance:
     - target: {fileID: 5474075446666776693, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 948865693}
     - target: {fileID: 5474075446666776693, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -8331,7 +8345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446666776693, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AudioMixer, Assembly-CSharp
+      value: GameAudioMixer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446666776693, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -8339,15 +8353,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446700406600, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_MaxValue
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446700406600, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_MinValue
-      value: -80
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446700406600, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_Direction
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446700406600, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -8360,7 +8374,7 @@ PrefabInstance:
     - target: {fileID: 5474075446700406600, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 948865693}
     - target: {fileID: 5474075446700406600, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -8371,7 +8385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446700406600, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AudioMixer, Assembly-CSharp
+      value: GameAudioMixer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446700406600, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -8391,7 +8405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446979061301, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -5.000061
+      value: 5.000061
       objectReference: {fileID: 0}
     - target: {fileID: 5474075446983199312, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8507,7 +8521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5474075448025488580, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}

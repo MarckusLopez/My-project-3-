@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class endTrigger : MonoBehaviour
+public class EndTrigger : MonoBehaviour
 {   
      [SerializeField] private AudioClip endLevelSoundClip;
     public GameManager gameManager;

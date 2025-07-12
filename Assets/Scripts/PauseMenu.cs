@@ -10,14 +10,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 
 {
-
+    public static bool GameIsPaused = false;
     [SerializeField] GameObject pauseMenu;
-
-
-
-
-
-
 
     public void Pause()
 
@@ -26,10 +20,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.gameObject.SetActive(true);
 
         Time.timeScale = 0f;
-
+        GameIsPaused = true;
     }
-
-
 
     public void Resume()
 
@@ -38,10 +30,9 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.gameObject.SetActive(false);
 
         Time.timeScale = 1f;
+        GameIsPaused = false;
 
     }
-
-
 
     public void Home(int SceneID)
 
@@ -52,5 +43,22 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneID);
 
     }
-
+   
+        void update()
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                if (GameIsPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
+            }
+   
 }
+}
+
+

@@ -399,7 +399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSoundClip: {fileID: 8300000, guid: 8a65fb2dd5c67f44c84e0708f1b820f2, type: 3}
   deathSoundClip: {fileID: 8300000, guid: aecacde56d2749b44aeb52d68cb11e31, type: 3}
-  musicSoundClip: {fileID: 8300000, guid: 32a7702c2e29b314fbd01fd85dd4066d, type: 3}
+  musicSoundClip: {fileID: 0}
   rb: {fileID: 6968705136536343495}
   playerSpeed: 3
   jumpHeight: {x: 1, y: 4.5}

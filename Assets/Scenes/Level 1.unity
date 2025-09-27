@@ -8653,6 +8653,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 644997087, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
+      propertyPath: m_text
+      value: 00:00
+      objectReference: {fileID: 0}
     - target: {fileID: 2004860594, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -8753,10 +8757,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 5474075447893171537, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5474075447893171549, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_Name
       value: Canvas

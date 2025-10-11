@@ -12,11 +12,12 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject TimerText;
 
     public void Pause()
 
     {
-
+        TimerText.gameObject.SetActive(false);
         pauseMenu.gameObject.SetActive(true);
 
         Time.timeScale = 0f;
@@ -31,7 +32,7 @@ public class PauseMenu : MonoBehaviour
 
         Time.timeScale = 1f;
         GameIsPaused = false;
-
+        TimerText.gameObject.SetActive(true);
     }
 
     public void Home(int SceneID)
@@ -46,9 +47,9 @@ public class PauseMenu : MonoBehaviour
    
         void update()
         {
-            if (Input.GetKey(KeyCode.E))
-            {
-                if (GameIsPaused)
+        if (Input.GetKey(KeyCode.E))
+        {
+             if (GameIsPaused)
                 {
                     Resume();
                 }
@@ -57,7 +58,7 @@ public class PauseMenu : MonoBehaviour
                     Pause();
                 }
             }
-   
+           
 }
 }
 

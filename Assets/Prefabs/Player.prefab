@@ -341,7 +341,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.25
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -399,7 +399,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSoundClip: {fileID: 8300000, guid: 8a65fb2dd5c67f44c84e0708f1b820f2, type: 3}
   deathSoundClip: {fileID: 8300000, guid: aecacde56d2749b44aeb52d68cb11e31, type: 3}
-  musicSoundClip: {fileID: 0}
   rb: {fileID: 6968705136536343495}
   playerSpeed: 3
   jumpHeight: {x: 1, y: 4.5}

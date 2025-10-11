@@ -14,6 +14,8 @@ BoxCollider2D boxColliderPlayer;
 int layerMaskGround;
 float heightTestPlayer;
 GameManager gameManager;
+    public PauseMenu pauseMenu;
+
 
 // Use this for initialization
 void Start () {
@@ -29,24 +31,39 @@ void Start () {
     // course can't be on the same layer as the player).
     layerMaskGround = LayerMask.GetMask("Ground");
 }
-// Update is called once per frame
-void Update ()
-{
-    transform.Translate(playerSpeed * Time.deltaTime, 0f, 0f);  //makes player run
-
-    if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())  //makes player jump
+    // Update is called once per frame
+    void Update()
     {
-        rb.AddForce(jumpHeight, ForceMode2D.Impulse);
-         SoundFXManager.instance.PlaySoundFXClip(jumpSoundClip, transform, 1f);
-}
-  if(rb.position.y < -1f){
-        gameManager.EndGame();
+        transform.Translate(playerSpeed * Time.deltaTime, 0f, 0f);  //makes player run
+
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())  //makes player jump
+        {
+            rb.AddForce(jumpHeight, ForceMode2D.Impulse);
+            SoundFXManager.instance.PlaySoundFXClip(jumpSoundClip, transform, 1f);
+        }
+        if (rb.position.y < -1f)
+        {
+            gameManager.EndGame();
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            /*if (GameIsPaused)
+            {
+                pauseMenu.Resume();
+            }
+            else
+            {
+                pauseMenu.Pause();
+            }*/
+
+        }
     }
-     if(Input.GetKeyDown(KeyCode.R)){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    
-}
-}
+
 private bool IsGrounded()
 {
     // Note that we only check for colliders on the Ground layer (we don't want to hit ourself). 

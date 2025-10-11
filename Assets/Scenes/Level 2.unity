@@ -4166,6 +4166,18 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetMusicVolume
       objectReference: {fileID: 0}
+    - target: {fileID: 3477825837552366700, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
+      propertyPath: _x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477825837552366700, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
+      propertyPath: _y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477825837552366701, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 6322b4931b7f15a4398cc26cda630d19, type: 3}
     - target: {fileID: 5474075446666776693, guid: 3983e806ec605b6448a248269e3bc2b1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0

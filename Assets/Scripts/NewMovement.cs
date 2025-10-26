@@ -17,8 +17,8 @@ GameManager gameManager;
     public PauseMenu pauseMenu;
 
 
-// Use this for initialization
-void Start () {
+    // Use this for initialization
+    void Start () {
   rb = GetComponent<Rigidbody2D>();
   gameManager = FindObjectOfType<GameManager>();
     // Get the player's collider so we can calculate the height of the character.
@@ -52,15 +52,7 @@ void Start () {
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            /*if (GameIsPaused)
-            {
-                pauseMenu.Resume();
-            }
-            else
-            {
-                pauseMenu.Pause();
-            }*/
-
+    
         }
     }
 

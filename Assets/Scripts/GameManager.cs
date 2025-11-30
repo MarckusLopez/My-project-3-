@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public Transform player;
     public GameObject completeLevelUI;
-    public float restartDelay = 1f;
+    public float restartDelay = 0f;
      public void CompleteLevel (){
 completeLevelUI.SetActive(true);
  SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

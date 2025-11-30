@@ -13,13 +13,13 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject TimerText;
-
+    [SerializeField] GameObject pause;
     public void Pause()
 
     {
         TimerText.gameObject.SetActive(false);
         pauseMenu.gameObject.SetActive(true);
-
+        pause.gameObject.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
@@ -33,6 +33,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         TimerText.gameObject.SetActive(true);
+        pause.gameObject.SetActive(true);
     }
 
     public void Home(int SceneID)
@@ -45,9 +46,9 @@ public class PauseMenu : MonoBehaviour
 
     }
    
-        void update()
+        void Update()
         {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
              if (GameIsPaused)
                 {

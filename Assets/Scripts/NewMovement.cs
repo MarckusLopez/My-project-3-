@@ -50,10 +50,6 @@ GameManager gameManager;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-    
-        }
     }
 
 private bool IsGrounded()

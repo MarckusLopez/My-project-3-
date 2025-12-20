@@ -9,7 +9,10 @@ public class Timer : MonoBehaviour
     public float elapsedTime;
     bool isRunning = true;
 
-
+    void awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     void Update()
     {
         if (!isRunning) return;
@@ -34,4 +37,5 @@ public class Timer : MonoBehaviour
         PlayerPrefs.SetFloat("SavedTime", elapsedTime);
         PlayerPrefs.Save();
     }
+  
 }

@@ -16,7 +16,28 @@ float heightTestPlayer;
 GameManager gameManager;
     public bool canJump = true;
 
+    private Vector3 startPosition;
 
+    // Called when the script instance is being loaded (even before Start)
+    void Awake()
+    {
+        // Save the current position of the GameObject when the game starts
+        startPosition = this.transform.position;
+        Debug.Log("Initial position saved: " + startPosition);
+    }
+
+    // You can add a method to easily reset the object's position later
+    public void ResetPositionToStart()
+    {
+        this.transform.position = startPosition;
+        // If using a Rigidbody, you might also want to stop its movement
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+    }
 
     // Use this for initialization
     void Start () {
@@ -44,7 +65,7 @@ GameManager gameManager;
         }
         if (rb.position.y < -1f)
         {
-            gameManager.EndGame();
+            ResetPositionToStart();
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -66,8 +87,8 @@ public bool IsGrounded()
  {
      if (collision.CompareTag("Obstacle")){
        SoundFXManager.instance.PlaySoundFXClip(deathSoundClip, transform, 1f);
-       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-     }
+            ResetPositionToStart();
+        }
      }
  
        

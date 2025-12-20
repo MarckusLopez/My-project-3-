@@ -14,7 +14,8 @@ BoxCollider2D boxColliderPlayer;
 int layerMaskGround;
 float heightTestPlayer;
 GameManager gameManager;
-    public PauseMenu pauseMenu;
+    public bool canJump = true;
+
 
 
     // Use this for initialization
@@ -36,7 +37,7 @@ GameManager gameManager;
     {
         transform.Translate(playerSpeed * Time.deltaTime, 0f, 0f);  //makes player run
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())  //makes player jump
+        if (Input.GetKeyDown(KeyCode.Space) && canJump && IsGrounded())  //makes player jump
         {
             rb.AddForce(jumpHeight, ForceMode2D.Impulse);
             SoundFXManager.instance.PlaySoundFXClip(jumpSoundClip, transform, 1f);
@@ -52,7 +53,7 @@ GameManager gameManager;
         }
     }
 
-private bool IsGrounded()
+public bool IsGrounded()
 {
     // Note that we only check for colliders on the Ground layer (we don't want to hit ourself). 
     RaycastHit2D hit = Physics2D.Raycast(boxColliderPlayer.bounds.center, Vector2.down, heightTestPlayer, layerMaskGround);

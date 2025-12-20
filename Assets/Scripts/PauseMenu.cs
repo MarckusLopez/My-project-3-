@@ -14,14 +14,15 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject TimerText;
     [SerializeField] GameObject pause;
+    public NewMovement player;
     public void Pause()
-
     {
         TimerText.gameObject.SetActive(false);
         pauseMenu.gameObject.SetActive(true);
         pause.gameObject.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        player.canJump = false;   
     }
 
     public void Resume()
@@ -34,6 +35,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         TimerText.gameObject.SetActive(true);
         pause.gameObject.SetActive(true);
+        player.canJump = true;
     }
 
     public void Home(int SceneID)

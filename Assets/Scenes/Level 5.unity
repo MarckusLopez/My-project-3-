@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &65156061 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3600998495378892021, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
+  m_PrefabInstance: {fileID: 2012431656}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8407a9a78312489419bd35eaf65faa6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &88843101
 GameObject:
   m_ObjectHideFlags: 3
@@ -792,6 +803,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 284542ea7ba74cc46b48ea0e4a63f3cc, type: 3}
+--- !u!1 &425230210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3600998495027583097, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
+  m_PrefabInstance: {fileID: 2012431656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &464398018
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,7 +3893,7 @@ MonoBehaviour:
   rb: {fileID: 505726875}
   playerSpeed: 6
   jumpHeight: {x: 1, y: 5.5}
-  pauseMenu: {fileID: 0}
+  canJump: 1
 --- !u!1001 &1055131696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4196,6 +4212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c154f61f5943e30498297cdf4b6a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: {fileID: 65156061}
   player: {fileID: 389367543}
   completeLevelUI: {fileID: 328798294}
   restartDelay: 0.5
@@ -6073,6 +6090,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3600998493634349978, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 983247222}
     - target: {fileID: 3600998493652181514, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -5
@@ -6101,6 +6122,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3600998494306574175, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 983247222}
     - target: {fileID: 3600998494360742454, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -5
@@ -6221,6 +6246,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3600998494789159595, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 983247222}
     - target: {fileID: 3600998495021118370, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
       propertyPath: m_Value
       value: 1
@@ -6281,6 +6310,14 @@ PrefabInstance:
       propertyPath: pause
       value: 
       objectReference: {fileID: 2012431657}
+    - target: {fileID: 3600998495378891914, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 983247222}
+    - target: {fileID: 3600998495378891914, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 425230210}
     - target: {fileID: 3600998495378891918, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
       propertyPath: m_Pivot.x
       value: 0

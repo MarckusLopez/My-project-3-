@@ -442,7 +442,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3600998495378892021, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
 --- !u!1 &161451903 stripped
 GameObject:
@@ -1177,6 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c154f61f5943e30498297cdf4b6a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: {fileID: 0}
   player: {fileID: 1223768699}
   completeLevelUI: {fileID: 1301132686}
   restartDelay: 0.5

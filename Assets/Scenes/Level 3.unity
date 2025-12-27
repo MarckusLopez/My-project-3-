@@ -730,7 +730,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3600998495378892021, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
 --- !u!1 &354809427 stripped
 GameObject:
@@ -839,11 +840,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6968705136536343489, guid: bbce80f45f353074ca2abd75bf6eeb1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.49
+      value: -5.283
       objectReference: {fileID: 0}
     - target: {fileID: 6968705136536343489, guid: bbce80f45f353074ca2abd75bf6eeb1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.99
+      value: -1.444
       objectReference: {fileID: 0}
     - target: {fileID: 6968705136536343489, guid: bbce80f45f353074ca2abd75bf6eeb1e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2336,6 +2337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c154f61f5943e30498297cdf4b6a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: {fileID: 0}
   player: {fileID: 1390603417}
   completeLevelUI: {fileID: 245134044}
   restartDelay: 0.5
@@ -5011,7 +5013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955831768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.49, y: -0.99, z: -10}
+  m_LocalPosition: {x: -5.283, y: -1.444, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

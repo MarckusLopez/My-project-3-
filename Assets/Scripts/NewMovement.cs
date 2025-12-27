@@ -63,7 +63,7 @@ GameManager gameManager;
             rb.AddForce(jumpHeight, ForceMode2D.Impulse);
             SoundFXManager.instance.PlaySoundFXClip(jumpSoundClip, transform, 1f);
         }
-        if (rb.position.y < -1f)
+        if (rb.position.y < -3f)
         {
             ResetPositionToStart();
         }

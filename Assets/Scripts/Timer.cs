@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     public float elapsedTime;
     bool isRunning = true;
 
-    void awake()
+    void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
     }

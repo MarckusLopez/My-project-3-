@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    
     public Timer timer;
     public Transform player;
     public GameObject completeLevelUI;
@@ -19,9 +20,12 @@ completeLevelUI.SetActive(true);
 public void EndGame (){
 if (player.position.y < -3 ){
     Invoke("Restart", restartDelay);
-    timer.EndGame();
+    
 }
 
 }
-
+    if (SceneManager.GetActiveScene().buildIndex == 6){
+        timer.SetActive(false);
+        timer.EndGame();
+        }
 }

@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &65156061 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3600998495378892021, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
-  m_PrefabInstance: {fileID: 2012431656}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8407a9a78312489419bd35eaf65faa6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &88843101
 GameObject:
   m_ObjectHideFlags: 3
@@ -4212,7 +4201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c154f61f5943e30498297cdf4b6a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 65156061}
+  timer: {fileID: 0}
   player: {fileID: 389367543}
   completeLevelUI: {fileID: 328798294}
   restartDelay: 0.5
@@ -6406,7 +6395,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3600998495378892021, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b6e9f48026dd4445852053f7c9ede01, type: 3}
 --- !u!1 &2012431657 stripped
 GameObject:
